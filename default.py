@@ -299,7 +299,7 @@ def search(search_url):
         data = json.loads(make_request(search_url))
         partner = False
         if 'Partners' in search_url:
-            key = 'Studios'
+            key = 'Partners'
             partner = True
         else: key = 'Videos'
         total = data[key]['Total']
