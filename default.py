@@ -291,7 +291,7 @@ def search(search_url):
             search_query = keyboard.getText()
             if len(search_query) == 0:
                 return
-            search_url = ('http://on.aol.com/ajax/GetSearchPageResults/%s/%s/1/relevance/'
+            search_url = ('http://on.aol.com/ajax/search/GetSearchPageResults/%s/%s/1/relevance/'
                           %(urllib.quote(search_query), search_url))
             if save_search:
                 add_search(search_query, search_url)
