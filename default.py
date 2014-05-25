@@ -228,7 +228,7 @@ def resolve_url(url):
             '2': ['_64.webm', '_4.mp4'],
             '3': [ '_8.mp4']
             }
-        playlist_id = url.split('-')[-1]
+        playlist_id = re.split('-|=', url)[-1]
         json_url = (
             'http://syn.5min.com/handlers/SenseHandler.ashx?func=GetResults&sid=577&isPlayerSeed=true&playlist='+playlist_id+
             '&videoCount=1&autoStart=true&cbCustomID=fiveMinCB_videos_companion&relatedMode=0&videoControlDisplayColor=3355443'
